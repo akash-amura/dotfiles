@@ -48,6 +48,8 @@ Plugin 'raimondi/delimitmate'
 Plugin 'Konfekt/FastFold'
 Plugin 'majutsushi/tagbar'
 Plugin 'lucapette/vim-ruby-doc'
+Plugin 'osyo-manga/vim-monster'
+Plugin 'mileszs/ack.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 if has('gui_running')
@@ -118,3 +120,5 @@ let g:neocomplete#sources#omni#input_patterns = {
 \}
 nmap <F8> :TagbarToggle<CR>
 runtime macros/matchit.vim
+" Set async completion.
+let g:monster#completion#rcodetools#backend = "async_rct_complete"
